@@ -78,7 +78,7 @@ type chunk struct {
         }
         b64Data = window.btoa(data);
         self.scans.unshift({ date: +(Date.now()), content: data });  
-        self.scans.unshift({ date: +(Date.now()), content: b64Data });  
+        //self.scans.unshift({ date: +(Date.now()), content: b64Data });  
       }
     });
     Instascan.Camera.getCameras().then(function (cameras) {
