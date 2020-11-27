@@ -109,6 +109,13 @@ type chunk struct {
       this.chunks = [];
       this.decodedChunks =  0;
       this.totalChunks = 0;
-    }
+    },
+    download: function(content) {
+      var a = document.createElement("a");
+      var file = new Blob([content], {type: 'text/plain'});
+      a.href = URL.createObjectURL(file);
+      a.download = "message.json";
+      a.click();
+    },
   }
 });

@@ -32,7 +32,7 @@
             <li class="empty">No scans yet</li>
           </ul>
           <transition-group name="scans" tag="ul">
-            <li v-for="scan in scans" :key="scan.date" :title="scan.content">{{ scan.content }}</li>
+            <li @click.stop="download(scan.content)" v-for="scan in scans" :key="scan.date" :title="scan.content">{{ scan.content }}</li>
           </transition-group>
         </section>
       </div>
